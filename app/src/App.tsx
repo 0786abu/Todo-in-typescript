@@ -52,6 +52,10 @@ const App = () => {
 
   const handlesubmit = (e: React.FormEvent)=>{
     e.preventDefault();
+    if(!task){
+      alert("Please enter a task");
+      return;
+    }
     const newTodo:Todo = {
       id: Math.floor(1000000000 + Math.random()* 9000000000),
       task: task,
